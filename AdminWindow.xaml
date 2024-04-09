@@ -1,0 +1,32 @@
+﻿<Window x:Class="hachapyrina2._0.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hachapyrina2._0"
+        mc:Ignorable="d"
+        Title="AdminWindow" Height="450" Width="800">
+    <Grid Loaded="arman_Loaded" Margin="0,0,0,-16">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF5C3BB3" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid x:Name="admin" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,362,264" Loaded="admin_Loaded"/>
+        <TextBox x:Name="login" TextWrapping="Wrap" Text="Логин" Width="120" Margin="463,22,217,381"/>
+        <TextBox x:Name="password" TextWrapping="Wrap" Text="Пароль" Width="120" Margin="463,78,217,324"/>
+        <Button Content="Добавить" Margin="615,22,55,381" Click="add_Click" Background="#FFA88BEC"/>
+        <Button Content="Удалить" Margin="615,78,55,324" Click="delete_Click" Background="#FFA88BEC"/>
+        <Button Content="Обновить" Margin="615,138,55,264" Click="refresh_Click" Background="#FFA88BEC"/>
+        <DataGrid x:Name="arman" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,199,362,0" Loaded="arman_Loaded"/>
+        <TextBox x:Name="marka" HorizontalAlignment="Left" Margin="463,199,0,0" TextWrapping="Wrap" Text="Марка" VerticalAlignment="Top" Width="105" Height="42" />
+        <Button Content="Добавить" Margin="615,251,55,151" Click="add_Click_2" Background="#FFA88BEC"/>
+        <Button Content="Удалить" Margin="615,298,55,104" Click="delete_Click_2" Background="#FFA88BEC"/>
+        <Button Content="Обновить" Margin="615,348,55,54" Click="refresh_Click_2" Background="#FFA88BEC"/>
+        <TextBox x:Name="model" TextWrapping="Wrap" Text="Модель" Margin="463,246,232,141"/>
+        <TextBox x:Name="sostoyan" TextWrapping="Wrap" Text="Состояние" Margin="463,298,232,94"/>
+        <TextBox x:Name="count" TextWrapping="Wrap" Text="Цена" Margin="463,348,232,44"/>
+
+    </Grid>
+</Window>

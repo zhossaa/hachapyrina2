@@ -1,0 +1,31 @@
+﻿<Window x:Class="hachapyrina2._0.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hachapyrina2._0"
+        mc:Ignorable="d"
+        Title="UserWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF5C3BB3" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="marka" TextWrapping="Wrap" Text="Марка" Margin="53,127,478,260"/>
+        <TextBox x:Name="count" TextWrapping="Wrap" Text="Стоимость" Margin="53,235,478,152"/>
+        <TextBox x:Name="model" TextWrapping="Wrap" Text="Модель" Margin="53,183,478,204" />
+        <Button x:Name="add" Content="Добавить" Margin="53,302,478,81" Click="add_click"/>
+        <Button x:Name="refresh" Content="Обновить" Margin="53,373,478,10" Click="refresh_click"/>
+        <DataGrid x:Name="user" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="400,0,10,0" Loaded="user_Loaded" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="марка" Binding="{Binding [марка]}" />
+                <DataGridTextColumn Header="модель" Binding="{Binding [модель]}" />
+                <DataGridTextColumn Header="код состояния" Binding="{Binding [код состояния]}" />
+                <DataGridTextColumn Header="цена" Binding="{Binding [цена]}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Image Source="/free-sticker-transport-10540685.png" Margin="41,10,466,324"/>
+    </Grid>
+</Window>
